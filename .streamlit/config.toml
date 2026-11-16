@@ -1,10 +1,26 @@
 [theme]
 base = "dark"
-primaryColor = "#E5C76B"
-backgroundColor = "#041D16"
-secondaryBackgroundColor = "#082820"
+primaryColor = "#B9EA32"
+# Streamlit uses this color for editable grid cells. styles.css paints the workspace.
+backgroundColor = "#101213"
+secondaryBackgroundColor = "#101213"
 textColor = "#F5F7F2"
+linkColor = "#B9EA32"
+borderColor = "#2B302C"
+dataframeBorderColor = "#2B302C"
+dataframeHeaderBackgroundColor = "#1C201D"
+dataframeHeaderTextColor = "#F5F7F2"
+showWidgetBorder = true
 font = "sans serif"
+
+[theme.sidebar]
+primaryColor = "#B9EA32"
+backgroundColor = "#0D0F10"
+secondaryBackgroundColor = "#151819"
+textColor = "#AEB7AD"
+linkColor = "#B9EA32"
+borderColor = "#2B302C"
+
 
 [server]
 headless = true
