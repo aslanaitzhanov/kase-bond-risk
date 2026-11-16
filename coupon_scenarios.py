@@ -10,6 +10,7 @@ import math
 from datetime import date
 
 from models import Bond, parse_date
+from hsbkb22 import is_hsbkb22
 
 SCENARIO_REQUIRED = "Необходим сценарий будущих купонов"
 SCENARIO_LABEL = "Расчёт по заданным выплатам"

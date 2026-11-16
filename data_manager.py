@@ -12,6 +12,8 @@ from typing import Any
 import pandas as pd
 
 from models import Bond, CashFlow, Portfolio
+from mum180_0009 import apply_reviewed_terms, is_mum180_0009
+from hsbkb22 import apply_reviewed_terms as apply_hsbk_terms, is_hsbkb22
 from validation import validate_portfolio
 
 FIELD_LABELS = {
@@ -159,8 +161,12 @@ def results_excel_bytes(rows: list[dict[str, Any]], sheet_name: str = "Резу�
 
 
 def save_portfolio_json(path: str | Path, bonds: list[Bond], assessment_date: date | None = None, **settings: Any) -> Path:
-    """Fail closed in the public build; export via portfolio_json_bytes instead."""
-    raise ValueError("Запись на диск сервера отключена. Скачайте портфель кнопкой JSON.")
+    """Write JSON only when explicitly called by the user's Save action."""
+    destination = Path(path).expanduser()
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    payload = Portfolio(bonds, assessment_date, **settings).to_dict()
+    destination.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    return destination
 
 
 def portfolio_json_bytes(bonds: list[Bond], assessment_date: date | None = None, **settings: Any) -> bytes:
@@ -257,5 +263,24 @@ def import_cashflows_bytes(filename: str, data: bytes, expected_isin: str = "", 
 
 
 def starter_bonds() -> list[Bond]:
-    """No bundled issue or market data in the public build."""
-    return []
+    """Build new starter records using the reviewed MUM180_0009 and HSBKb22 references."""
+    assessment = date(2026, 10, 13)
+    source = "Исходные сведения пользователя; независимо не подтверждены"
+    definitions = [
+        ("MUM180_0009", "KZKD00000717", "", 7.22, 1, 777, ["2026-12-10"]),
+        ("MTC048_0002", "KZKF00000020", "", 18.415, 2, 1303, ["2026-11-08", "2027-05-08"]),
+        ("MTC084_0001", "KZKF00000038", "", 18.353, 2, 2405, ["2026-11-14", "2027-05-14"]),
+        ("HSBKb22", "KZ2C00012482", "Halyk Bank", 18.38, 2, 416, ["2026-12-03", "2027-06-03"]),
+        ("SKKZb11", "KZ2C00002319", "Samruk-Kazyna", 10.50, 2, 290, ["2027-02-03", "2027-08-03"]),
+    ]
+    bonds = [Bond(
+        name=name, isin=isin, issuer=issuer, data_source=source, data_checked_date=assessment,
+        face_value=1000.0, quantity=20000, ytm_pct=None, coupon_rate_pct=coupon,
+        valuation_date=assessment, maturity_date=None, coupon_frequency=frequency,
+        residual_days_user_reported=residual,
+        user_supplied_coupon_dates=[date.fromisoformat(d) for d in dates],
+        notes="Купонные даты заданы пользователем и не являются полным подтверждённым графиком; дата погашения не выведена из остаточного срока.",
+        included=False,
+    ) for name, isin, issuer, coupon, frequency, residual, dates in definitions]
+    return [apply_reviewed_terms(bond) if is_mum180_0009(bond) else
+            apply_hsbk_terms(bond) if is_hsbkb22(bond) else bond for bond in bonds]

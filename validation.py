@@ -8,7 +8,7 @@ from datetime import date
 from typing import Iterable
 
 from models import Bond, COUPON_TYPES
-from day_count_conventions import KASE_30_360
+from mum180_0009 import KASE_30_360
 from schedule import schedule_errors, scenario_coverage_errors
 from coupon_scenarios import coupon_scenario_confirmed, requires_coupon_scenario
 from kase_pricing import ACT365F_PRICING_METHOD, KASE_PRICING_METHOD

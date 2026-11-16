@@ -11,7 +11,7 @@ from datetime import date
 from typing import Iterable
 
 from models import CashFlow
-from day_count_conventions import KASE_30_360
+from mum180_0009 import KASE_30_360
 from schedule import shift_months
 
 

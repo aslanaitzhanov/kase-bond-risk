@@ -7,6 +7,7 @@ from datetime import date
 from typing import Iterable
 
 from models import Bond, CashFlow, parse_date
+from hsbkb22 import is_hsbkb22, scenario_window_errors
 
 
 def shift_months(anchor: date, months: int) -> date:

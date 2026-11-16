@@ -1,0 +1,677 @@
+{
+  "schema_version": 2,
+  "assessment_date": "2026-10-29",
+  "bonds": [
+    {
+      "name": "MUM180_0009",
+      "isin": "",
+      "record_id": "6ea588cff70d48909186524ea8c79f34",
+      "issuer": "",
+      "instrument_type": "Облигация",
+      "currency": "KZT",
+      "data_source": "Введено пользователем",
+      "data_checked_date": "2026-10-29",
+      "face_value": 1000.0,
+      "quantity": 20000,
+      "ytm_pct": 14.85,
+      "coupon_rate_pct": 7.22,
+      "valuation_date": "2026-10-29",
+      "maturity_date": "2028-12-10",
+      "coupon_frequency": 1,
+      "day_count": "30/360 KASE (п. 18)",
+      "cashflows": [
+        {
+          "payment_date": "2025-12-10",
+          "coupon_amount": 72.2,
+          "redemption_amount": 0.0,
+          "status": "user",
+          "source": ""
+        },
+        {
+          "payment_date": "2026-12-10",
+          "coupon_amount": 72.2,
+          "redemption_amount": 0.0,
+          "status": "user",
+          "source": ""
+        },
+        {
+          "payment_date": "2027-12-10",
+          "coupon_amount": 72.2,
+          "redemption_amount": 0.0,
+          "status": "user",
+          "source": ""
+        },
+        {
+          "payment_date": "2028-12-10",
+          "coupon_amount": 72.2,
+          "redemption_amount": 1000.0,
+          "status": "user",
+          "source": ""
+        }
+      ],
+      "user_supplied_coupon_dates": [
+        "2026-12-10",
+        "2027-12-10",
+        "2028-12-10"
+      ],
+      "nonstandard_coupon_period": false,
+      "stub_accrual_confirmed": false,
+      "schedule_confirmed": true,
+      "schedule_source": "",
+      "included": true,
+      "residual_days_user_reported": null,
+      "notes": "",
+      "issue_date": null,
+      "first_coupon_date": null,
+      "schedule_kind": "regular",
+      "schedule_status": "user",
+      "regularity_confirmed": true,
+      "provenance": {},
+      "coupon_type": "fixed",
+      "ytm_observation_date": null,
+      "ytm_origin": "user_input",
+      "ytm_source": "",
+      "is_model": false,
+      "pricing_method": "KASE coupon formula (30/360)",
+      "pricing_input": {}
+    },
+    {
+      "name": "MTC048_0002",
+      "isin": "",
+      "record_id": "6aab4dc2cab34a18a059c50ab01d7601",
+      "issuer": "",
+      "instrument_type": "Облигация",
+      "currency": "KZT",
+      "data_source": "Введено пользователем",
+      "data_checked_date": null,
+      "face_value": 1000.0,
+      "quantity": 20000,
+      "ytm_pct": 18.2,
+      "coupon_rate_pct": 18.415,
+      "valuation_date": "2026-10-29",
+      "maturity_date": "2030-05-08",
+      "coupon_frequency": 2,
+      "day_count": "Actual/365 Fixed",
+      "cashflows": [
+        {
+          "payment_date": "2026-11-08",
+          "coupon_amount": 92.8318,
+          "redemption_amount": 0.0,
+          "status": "user",
+          "source": ""
+        },
+        {
+          "payment_date": "2027-05-08",
+          "coupon_amount": 91.3182,
+          "redemption_amount": 0.0,
+          "status": "user",
+          "source": ""
+        },
+        {
+          "payment_date": "2027-11-08",
+          "coupon_amount": 92.8318,
+          "redemption_amount": 0.0,
+          "status": "user",
+          "source": ""
+        },
+        {
+          "payment_date": "2028-05-08",
+          "coupon_amount": 91.8227,
+          "redemption_amount": 0.0,
+          "status": "user",
+          "source": ""
+        },
+        {
+          "payment_date": "2028-11-08",
+          "coupon_amount": 92.8318,
+          "redemption_amount": 0.0,
+          "status": "user",
+          "source": ""
+        },
+        {
+          "payment_date": "2029-05-08",
+          "coupon_amount": 91.3182,
+          "redemption_amount": 0.0,
+          "status": "user",
+          "source": ""
+        },
+        {
+          "payment_date": "2029-11-08",
+          "coupon_amount": 92.8318,
+          "redemption_amount": 0.0,
+          "status": "user",
+          "source": ""
+        },
+        {
+          "payment_date": "2030-05-08",
+          "coupon_amount": 91.3182,
+          "redemption_amount": 1000.0,
+          "status": "user",
+          "source": ""
+        }
+      ],
+      "user_supplied_coupon_dates": [
+        "2026-11-08",
+        "2027-05-08",
+        "2027-11-08",
+        "2028-05-08",
+        "2028-11-08",
+        "2029-05-08",
+        "2029-11-08",
+        "2030-05-08"
+      ],
+      "nonstandard_coupon_period": false,
+      "stub_accrual_confirmed": false,
+      "schedule_confirmed": true,
+      "schedule_source": "",
+      "included": true,
+      "residual_days_user_reported": null,
+      "notes": "",
+      "issue_date": null,
+      "first_coupon_date": null,
+      "schedule_kind": "scenario",
+      "schedule_status": "user",
+      "regularity_confirmed": false,
+      "provenance": {
+        "coupon_scenario": {
+          "value": {
+            "coupon_type": "floating",
+            "valuation_date": "2026-10-29",
+            "maturity_date": "2030-05-08",
+            "face_value": 1000.0,
+            "coupon_frequency": 2,
+            "nonstandard_coupon_period": false,
+            "known_dates": [
+              "2026-11-08",
+              "2027-05-08",
+              "2027-11-08",
+              "2028-05-08",
+              "2028-11-08",
+              "2029-05-08",
+              "2029-11-08",
+              "2030-05-08"
+            ],
+            "cashflows": [
+              {
+                "payment_date": "2026-11-08",
+                "coupon_amount": 92.8318,
+                "redemption_amount": 0.0
+              },
+              {
+                "payment_date": "2027-05-08",
+                "coupon_amount": 91.3182,
+                "redemption_amount": 0.0
+              },
+              {
+                "payment_date": "2027-11-08",
+                "coupon_amount": 92.8318,
+                "redemption_amount": 0.0
+              },
+              {
+                "payment_date": "2028-05-08",
+                "coupon_amount": 91.8227,
+                "redemption_amount": 0.0
+              },
+              {
+                "payment_date": "2028-11-08",
+                "coupon_amount": 92.8318,
+                "redemption_amount": 0.0
+              },
+              {
+                "payment_date": "2029-05-08",
+                "coupon_amount": 91.3182,
+                "redemption_amount": 0.0
+              },
+              {
+                "payment_date": "2029-11-08",
+                "coupon_amount": 92.8318,
+                "redemption_amount": 0.0
+              },
+              {
+                "payment_date": "2030-05-08",
+                "coupon_amount": 91.3182,
+                "redemption_amount": 1000.0
+              }
+            ]
+          },
+          "status": "user_confirmed",
+          "origin": "manual",
+          "checked_on": "2026-10-29"
+        }
+      },
+      "coupon_type": "floating",
+      "ytm_observation_date": null,
+      "ytm_origin": "user_input",
+      "ytm_source": "",
+      "is_model": false,
+      "pricing_method": "Actual/365 Fixed (standard)",
+      "pricing_input": {}
+    },
+    {
+      "name": "MTC084_0001",
+      "isin": "",
+      "record_id": "097f5904e8484b41ac2edca1dc410ec3",
+      "issuer": "",
+      "instrument_type": "Облигация",
+      "currency": "KZT",
+      "data_source": "Введено пользователем",
+      "data_checked_date": null,
+      "face_value": 1000.0,
+      "quantity": 20000,
+      "ytm_pct": 18.31,
+      "coupon_rate_pct": 18.353,
+      "valuation_date": "2026-10-29",
+      "maturity_date": "2033-05-14",
+      "coupon_frequency": 2,
+      "day_count": "Actual/365 Fixed",
+      "cashflows": [
+        {
+          "payment_date": "2026-11-14",
+          "coupon_amount": 92.5192,
+          "redemption_amount": 0.0,
+          "status": "user",
+          "source": ""
+        },
+        {
+          "payment_date": "2027-05-14",
+          "coupon_amount": 91.0108,
+          "redemption_amount": 0.0,
+          "status": "user",
+          "source": ""
+        },
+        {
+          "payment_date": "2027-11-14",
+          "coupon_amount": 92.5192,
+          "redemption_amount": 0.0,
+          "status": "user",
+          "source": ""
+        },
+        {
+          "payment_date": "2028-05-14",
+          "coupon_amount": 91.5136,
+          "redemption_amount": 0.0,
+          "status": "user",
+          "source": ""
+        },
+        {
+          "payment_date": "2028-11-14",
+          "coupon_amount": 92.5192,
+          "redemption_amount": 0.0,
+          "status": "user",
+          "source": ""
+        },
+        {
+          "payment_date": "2029-05-14",
+          "coupon_amount": 91.0108,
+          "redemption_amount": 0.0,
+          "status": "user",
+          "source": ""
+        },
+        {
+          "payment_date": "2029-11-14",
+          "coupon_amount": 92.5192,
+          "redemption_amount": 0.0,
+          "status": "user",
+          "source": ""
+        },
+        {
+          "payment_date": "2030-05-14",
+          "coupon_amount": 91.0108,
+          "redemption_amount": 0.0,
+          "status": "user",
+          "source": ""
+        },
+        {
+          "payment_date": "2030-11-14",
+          "coupon_amount": 92.5192,
+          "redemption_amount": 0.0,
+          "status": "user",
+          "source": ""
+        },
+        {
+          "payment_date": "2031-05-14",
+          "coupon_amount": 91.0108,
+          "redemption_amount": 0.0,
+          "status": "user",
+          "source": ""
+        },
+        {
+          "payment_date": "2031-11-14",
+          "coupon_amount": 92.5192,
+          "redemption_amount": 0.0,
+          "status": "user",
+          "source": ""
+        },
+        {
+          "payment_date": "2032-05-14",
+          "coupon_amount": 91.5136,
+          "redemption_amount": 0.0,
+          "status": "user",
+          "source": ""
+        },
+        {
+          "payment_date": "2032-11-14",
+          "coupon_amount": 92.5192,
+          "redemption_amount": 0.0,
+          "status": "user",
+          "source": ""
+        },
+        {
+          "payment_date": "2033-05-14",
+          "coupon_amount": 91.0108,
+          "redemption_amount": 1000.0,
+          "status": "user",
+          "source": ""
+        }
+      ],
+      "user_supplied_coupon_dates": [
+        "2026-11-14",
+        "2027-05-14",
+        "2027-11-14",
+        "2028-05-14",
+        "2028-11-14",
+        "2029-05-14",
+        "2029-11-14",
+        "2030-05-14",
+        "2030-11-14",
+        "2031-05-14",
+        "2031-11-14",
+        "2032-05-14",
+        "2032-11-14",
+        "2033-05-14"
+      ],
+      "nonstandard_coupon_period": false,
+      "stub_accrual_confirmed": false,
+      "schedule_confirmed": true,
+      "schedule_source": "",
+      "included": true,
+      "residual_days_user_reported": null,
+      "notes": "",
+      "issue_date": null,
+      "first_coupon_date": null,
+      "schedule_kind": "scenario",
+      "schedule_status": "user",
+      "regularity_confirmed": false,
+      "provenance": {
+        "coupon_scenario": {
+          "value": {
+            "coupon_type": "floating",
+            "valuation_date": "2026-10-29",
+            "maturity_date": "2033-05-14",
+            "face_value": 1000.0,
+            "coupon_frequency": 2,
+            "nonstandard_coupon_period": false,
+            "known_dates": [
+              "2026-11-14",
+              "2027-05-14",
+              "2027-11-14",
+              "2028-05-14",
+              "2028-11-14",
+              "2029-05-14",
+              "2029-11-14",
+              "2030-05-14",
+              "2030-11-14",
+              "2031-05-14",
+              "2031-11-14",
+              "2032-05-14",
+              "2032-11-14",
+              "2033-05-14"
+            ],
+            "cashflows": [
+              {
+                "payment_date": "2026-11-14",
+                "coupon_amount": 92.5192,
+                "redemption_amount": 0.0
+              },
+              {
+                "payment_date": "2027-05-14",
+                "coupon_amount": 91.0108,
+                "redemption_amount": 0.0
+              },
+              {
+                "payment_date": "2027-11-14",
+                "coupon_amount": 92.5192,
+                "redemption_amount": 0.0
+              },
+              {
+                "payment_date": "2028-05-14",
+                "coupon_amount": 91.5136,
+                "redemption_amount": 0.0
+              },
+              {
+                "payment_date": "2028-11-14",
+                "coupon_amount": 92.5192,
+                "redemption_amount": 0.0
+              },
+              {
+                "payment_date": "2029-05-14",
+                "coupon_amount": 91.0108,
+                "redemption_amount": 0.0
+              },
+              {
+                "payment_date": "2029-11-14",
+                "coupon_amount": 92.5192,
+                "redemption_amount": 0.0
+              },
+              {
+                "payment_date": "2030-05-14",
+                "coupon_amount": 91.0108,
+                "redemption_amount": 0.0
+              },
+              {
+                "payment_date": "2030-11-14",
+                "coupon_amount": 92.5192,
+                "redemption_amount": 0.0
+              },
+              {
+                "payment_date": "2031-05-14",
+                "coupon_amount": 91.0108,
+                "redemption_amount": 0.0
+              },
+              {
+                "payment_date": "2031-11-14",
+                "coupon_amount": 92.5192,
+                "redemption_amount": 0.0
+              },
+              {
+                "payment_date": "2032-05-14",
+                "coupon_amount": 91.5136,
+                "redemption_amount": 0.0
+              },
+              {
+                "payment_date": "2032-11-14",
+                "coupon_amount": 92.5192,
+                "redemption_amount": 0.0
+              },
+              {
+                "payment_date": "2033-05-14",
+                "coupon_amount": 91.0108,
+                "redemption_amount": 1000.0
+              }
+            ]
+          },
+          "status": "user_confirmed",
+          "origin": "manual",
+          "checked_on": "2026-10-29"
+        }
+      },
+      "coupon_type": "floating",
+      "ytm_observation_date": null,
+      "ytm_origin": "user_input",
+      "ytm_source": "",
+      "is_model": false,
+      "pricing_method": "Actual/365 Fixed (standard)",
+      "pricing_input": {}
+    },
+    {
+      "name": "HSBKb22",
+      "isin": "",
+      "record_id": "7a3ba5cf72054edeaa7476cd3bc22b2d",
+      "issuer": "",
+      "instrument_type": "Облигация",
+      "currency": "KZT",
+      "data_source": "Введено пользователем",
+      "data_checked_date": null,
+      "face_value": 1000.0,
+      "quantity": 20000,
+      "ytm_pct": 18.2,
+      "coupon_rate_pct": 18.38,
+      "valuation_date": "2026-10-29",
+      "maturity_date": "2027-12-03",
+      "coupon_frequency": 2,
+      "day_count": "Actual/365 Fixed",
+      "cashflows": [
+        {
+          "payment_date": "2026-12-03",
+          "coupon_amount": 92.1518,
+          "redemption_amount": 0.0,
+          "status": "user",
+          "source": ""
+        },
+        {
+          "payment_date": "2027-06-03",
+          "coupon_amount": 91.6482,
+          "redemption_amount": 0.0,
+          "status": "user",
+          "source": ""
+        },
+        {
+          "payment_date": "2027-12-03",
+          "coupon_amount": 92.1518,
+          "redemption_amount": 1000.0,
+          "status": "user",
+          "source": ""
+        }
+      ],
+      "user_supplied_coupon_dates": [
+        "2026-12-03",
+        "2027-06-03",
+        "2027-12-03"
+      ],
+      "nonstandard_coupon_period": false,
+      "stub_accrual_confirmed": false,
+      "schedule_confirmed": true,
+      "schedule_source": "",
+      "included": true,
+      "residual_days_user_reported": null,
+      "notes": "",
+      "issue_date": null,
+      "first_coupon_date": null,
+      "schedule_kind": "scenario",
+      "schedule_status": "user",
+      "regularity_confirmed": false,
+      "provenance": {
+        "coupon_scenario": {
+          "value": {
+            "coupon_type": "floating",
+            "valuation_date": "2026-10-29",
+            "maturity_date": "2027-12-03",
+            "face_value": 1000.0,
+            "coupon_frequency": 2,
+            "nonstandard_coupon_period": false,
+            "known_dates": [
+              "2026-12-03",
+              "2027-06-03",
+              "2027-12-03"
+            ],
+            "cashflows": [
+              {
+                "payment_date": "2026-12-03",
+                "coupon_amount": 92.1518,
+                "redemption_amount": 0.0
+              },
+              {
+                "payment_date": "2027-06-03",
+                "coupon_amount": 91.6482,
+                "redemption_amount": 0.0
+              },
+              {
+                "payment_date": "2027-12-03",
+                "coupon_amount": 92.1518,
+                "redemption_amount": 1000.0
+              }
+            ]
+          },
+          "status": "user_confirmed",
+          "origin": "manual",
+          "checked_on": "2026-10-29"
+        }
+      },
+      "coupon_type": "floating",
+      "ytm_observation_date": null,
+      "ytm_origin": "user_input",
+      "ytm_source": "",
+      "is_model": false,
+      "pricing_method": "Actual/365 Fixed (standard)",
+      "pricing_input": {}
+    },
+    {
+      "name": "SKKZb11",
+      "isin": "",
+      "record_id": "8fbd4a5253404b6db80d59e14c7888ec",
+      "issuer": "",
+      "instrument_type": "Облигация",
+      "currency": "KZT",
+      "data_source": "Введено пользователем",
+      "data_checked_date": "2026-10-29",
+      "face_value": 1000.0,
+      "quantity": 20000,
+      "ytm_pct": 15.85,
+      "coupon_rate_pct": 10.5,
+      "valuation_date": "2026-10-29",
+      "maturity_date": "2027-08-03",
+      "coupon_frequency": 2,
+      "day_count": "30/360 KASE (п. 18)",
+      "cashflows": [
+        {
+          "payment_date": "2026-08-03",
+          "coupon_amount": 52.5,
+          "redemption_amount": 0.0,
+          "status": "user",
+          "source": ""
+        },
+        {
+          "payment_date": "2027-02-03",
+          "coupon_amount": 52.5,
+          "redemption_amount": 0.0,
+          "status": "user",
+          "source": ""
+        },
+        {
+          "payment_date": "2027-08-03",
+          "coupon_amount": 52.5,
+          "redemption_amount": 1000.0,
+          "status": "user",
+          "source": ""
+        }
+      ],
+      "user_supplied_coupon_dates": [
+        "2027-02-03",
+        "2027-08-03"
+      ],
+      "nonstandard_coupon_period": false,
+      "stub_accrual_confirmed": false,
+      "schedule_confirmed": true,
+      "schedule_source": "",
+      "included": true,
+      "residual_days_user_reported": null,
+      "notes": "",
+      "issue_date": null,
+      "first_coupon_date": null,
+      "schedule_kind": "regular",
+      "schedule_status": "user",
+      "regularity_confirmed": true,
+      "provenance": {},
+      "coupon_type": "fixed",
+      "ytm_observation_date": null,
+      "ytm_origin": "user_input",
+      "ytm_source": "",
+      "is_model": false,
+      "pricing_method": "KASE coupon formula (30/360)",
+      "pricing_input": {}
+    }
+  ],
+  "weight_mode": "По рыночной стоимости",
+  "scenarios": [],
+  "calculation_mode": "model"
+}

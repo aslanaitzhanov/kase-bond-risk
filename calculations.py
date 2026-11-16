@@ -14,7 +14,8 @@ from typing import Iterable
 import numpy as np
 
 from models import Bond, CashFlow
-from day_count_conventions import KASE_30_360
+from mum180_0009 import KASE_30_360
+from hsbkb22 import is_hsbkb22, ACCRUAL_UNAVAILABLE
 from schedule import shift_months
 from validation import validate_bond
 from coupon_scenarios import (current_coupon_period, requires_coupon_scenario,
