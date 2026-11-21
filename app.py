@@ -103,6 +103,26 @@ def init_state():
         for key in ("weight_mode", "scenarios", "calculation_mode", "assessment_date"):
             if key in restored and restored[key] is not None:
                 st.session_state[key] = restored[key]
+    if not st.session_state.get("default_scenarios_initialized"):
+        if not st.session_state.scenarios:
+            included = [bond for bond in st.session_state.bonds if bond.included]
+            try:
+                results = stress_scenarios(included, [-200, -100, 100, 200],
+                    calculation_mode=st.session_state.calculation_mode,
+                    weight_mode=st.session_state.weight_mode)
+            except (ValueError, TypeError):
+                results = []
+            for index, shock in enumerate([-200, -100, 100, 200]):
+                result = results[index] if index < len(results) else None
+                st.session_state.scenarios.append({
+                    "name": f"Сдвиг {shock:+d} б.п.", "shock_bp": shock,
+                    "individual_shocks": None,
+                    "scenario_type": result["scenario_type"] if result else "Параллельный сдвиг YTM",
+                    "saved_mode": st.session_state.calculation_mode,
+                    "saved_on": date.today().isoformat(), "saved_result": result,
+                    "portfolio_snapshot": [bond.to_dict() for bond in included],
+                })
+        st.session_state.default_scenarios_initialized = True
     preserve_record_widgets(st.session_state)
     st.session_state.setdefault("active_shock_bp", 100)
     for key in ("risk_limit_pct", "individual_shifts", "position_risk_sort", "weight_mode", "assessment_date"):
@@ -1516,13 +1536,13 @@ def scenarios_page():
     st.dataframe(styled_changes(frame, SCENARIO_CHANGE_FIELDS), hide_index=True, width="stretch", placeholder="—")
     if "Точный P&L, ₸" in frame:
         fig = go.Figure()
-        for field, pattern in [("Линейный P&L, ₸", "/"), ("P&L с выпуклостью, ₸", "."), ("Точный P&L, ₸", "")]:
-            values = frame[field]
-            colors = [CHANGE_COLORS.get(change_display(value, 4)[1], "#475569") for value in values]
-            fig.add_trace(go.Bar(x=frame["Сценарий"], y=values, name=field,
-                                marker=dict(color=colors, pattern=dict(shape=pattern)),
-                                customdata=[change_hover(value, " ₸") for value in values],
-                                hovertemplate="%{customdata}<extra>%{fullData.name}</extra>"))
+        field = "Точный P&L, ₸"
+        values = frame[field]
+        colors = [CHANGE_COLORS.get(change_display(value, 4)[1], "#475569") for value in values]
+        fig.add_trace(go.Bar(x=frame["Сценарий"], y=values, name=field,
+                            marker=dict(color=colors),
+                            customdata=[change_hover(value, " ₸") for value in values],
+                            hovertemplate="%{customdata}<extra>%{fullData.name}</extra>"))
         chart_style(fig, "P&L, ₸")
         fig.update_layout(xaxis_title="Сценарий", barmode="group")
         st.plotly_chart(fig, width="stretch", theme=None)
